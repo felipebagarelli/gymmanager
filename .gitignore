@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# IntelliJ
+.idea/
+*.iml
+
+# Build
+target/
+
+# OS
+.DS_Store
+Thumbs.db
