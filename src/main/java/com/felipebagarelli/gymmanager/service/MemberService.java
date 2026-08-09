@@ -1,6 +1,7 @@
 package com.felipebagarelli.gymmanager.service;
 
 import com.felipebagarelli.gymmanager.dto.request.CreateMemberRequest;
+import com.felipebagarelli.gymmanager.dto.request.UpdateMemberRequest;
 import com.felipebagarelli.gymmanager.dto.response.MemberResponse;
 import com.felipebagarelli.gymmanager.entity.Member;
 import com.felipebagarelli.gymmanager.repository.MemberRepository;
@@ -28,6 +29,7 @@ public class MemberService {
                 member.isActive()
         );
     }
+
 
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
@@ -65,6 +67,23 @@ public class MemberService {
 
     public MemberResponse findMemberById(Long id){
         return toResponse(memberRepository.findById(id).orElseThrow());
+    }
+
+    public void deleteById(Long id){
+        memberRepository.deleteById(id);
+    }
+
+    public MemberResponse updateById(Long id, UpdateMemberRequest request){
+        Member member = memberRepository.findById(id).orElseThrow();
+        member.setName(request.name());
+        member.setPhone(request.phone());
+        member.setEmail(request.email());
+        member.setBirthDate(request.birthDate());
+        member.setHeight(request.height());
+        member.setWeight(request.weight());
+        memberRepository.save(member);
+
+        return toResponse(member);
     }
 
 
