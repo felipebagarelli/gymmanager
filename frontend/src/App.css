@@ -1,0 +1,200 @@
+/* ===== GERAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+#root {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+/* ===== TÍTULO ===== */
+
+h1 {
+    margin: 0 0 30px;
+    font-size: 32px;
+    color: #1f2937;
+}
+
+
+/* ===== ÁREA DOS BOTÕES ===== */
+
+div > button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 18px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #2563eb;
+    color: white;
+}
+
+div > button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ===== TABELA ===== */
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+    background: #1f2937;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* ===== BOTÕES DA TABELA ===== */
+
+td button {
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    margin-right: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+td button:first-child {
+    background: #f59e0b;
+    color: white;
+}
+
+td button:first-child:hover {
+    background: #d97706;
+}
+
+td button:last-child {
+    background: #dc2626;
+    color: white;
+}
+
+td button:last-child:hover {
+    background: #b91c1c;
+}
+
+
+/* ===== FORMULÁRIO ===== */
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+form label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #16a34a;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #15803d;
+}
+
+
+/* ===== FORMULÁRIO DE EDIÇÃO DENTRO DA TABELA ===== */
+
+td[colspan="8"] {
+    background: #f8fafc;
+    padding: 25px;
+}
+
+td[colspan="8"] form {
+    margin: 0 auto;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+
+    #root {
+        padding: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+}
