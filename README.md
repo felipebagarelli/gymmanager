@@ -1,55 +1,52 @@
-> 🚧 **Projeto em desenvolvimento — estágio inicial do Frontend**
->
-> O Gym Manager ainda está em desenvolvimento e estas imagens representam o estado atual da aplicação (16/08/2026), principalmente para acompanhar minha evolução durante os estudos.
->
-> Atualmente estou nas primeiras semanas de estudo de **JavaScript, TypeScript e React**, depois de ter construído a base do projeto com **Java e Spring Boot**.
->
-> O frontend ainda está bastante simples e algumas partes ainda serão refatoradas, melhoradas e reorganizadas. A ideia é continuar evoluindo a aplicação conforme avanço nos estudos.
-> 
-> Ainda falta também estruturção de outras etapas do backend!
-
-## Tela principal
-
-![Tela principal do CRUD](./docs/images/tela.inicial.crud.png)
-
-Nesta versão já é possível visualizar os membros cadastrados e realizar ações como editar e excluir.
-
-## Cadastro de membro
-
-![Cadastro de membro](./docs/images/adicionar.membro.png)
-
-O formulário permite cadastrar um novo membro e enviar os dados para a API desenvolvida em Spring Boot.
-
-## Edição de membro
-
-![Edição de membro](./docs/images/editar.membro.png)
-
-A funcionalidade de atualização já está implementada, mas o preenchimento automático dos dados no formulário ainda está sendo melhorado.
-
-## Exclusão de membro
-
-![Exclusão de membro](./docs/images/excluir.membros.png)
-
-A exclusão é realizada através da API e a tabela é atualizada após a operação.
 # Gym Manager
 
-Projeto Full Stack para gerenciamento de academia, desenvolvido com **Java, Spring Boot, PostgreSQL, React e TypeScript**.
+Aplicação Full Stack para gerenciamento de academia, desenvolvida como projeto de estudo e portfólio com foco em Backend Java e integração com frontend React/TypeScript.
 
-Estou desenvolvendo o Gym Manager como projeto de estudo e portfólio, com o objetivo de praticar desenvolvimento Backend Java e, aos poucos, evoluir para uma aplicação Full Stack mais completa.
+O projeto simula um sistema para gerenciamento de alunos, exercícios e treinos, permitindo praticar conceitos de desenvolvimento de APIs REST, persistência de dados, relacionamento entre entidades e construção de interfaces web.
 
-
-
-##  Objetivo
-
-A ideia do Gym Manager é simular um sistema que possa ser utilizado por academias e personal trainers para gerenciamento de alunos, exercícios e treinos.
-
-O projeto começou com o desenvolvimento da API em Java e Spring Boot e posteriormente ganhou um frontend em React e TypeScript.
+>  **Projeto em desenvolvimento**
+>
+> O Gym Manager continua em evolução conforme novos conhecimentos são incorporados ao projeto. As funcionalidades atuais representam o estágio mais recente da aplicação.
 
 ---
 
-#  Tecnologias
+## 📸 Screenshots
 
-## Backend
+### Dashboard
+
+![Dashboard](./docs/images/dashboard.png)
+
+### Alunos
+
+![Lista de alunos](./docs/images/alunos.png)
+
+### Treinos do aluno
+
+![Treinos](./docs/images/treinosalunos.png)
+
+### Exercícios do treino
+
+![Exercícios do treino](./docs/images/exerciciostreino.png)
+
+### Exemplo Form
+
+![Exercícios](./docs/images/formexerciciosdotreino.png)
+
+---
+
+##  Objetivo
+
+O Gym Manager foi desenvolvido para simular um sistema que poderia ser utilizado por academias e personal trainers para gerenciamento de alunos, exercícios e treinos.
+
+O projeto começou com o desenvolvimento da API utilizando Java e Spring Boot e posteriormente ganhou um frontend desenvolvido com React e TypeScript.
+
+O principal objetivo é utilizar o projeto como ambiente de aprendizado e prática, evoluindo gradualmente desde operações básicas de CRUD até recursos mais avançados de segurança, validação, testes e publicação.
+
+---
+
+##  Tecnologias
+
+### Backend
 
 - Java 25
 - Spring Boot
@@ -59,9 +56,8 @@ O projeto começou com o desenvolvimento da API em Java e Spring Boot e posterio
 - PostgreSQL
 - Maven
 - Lombok
-- Spring Security
 
-## Frontend
+### Frontend
 
 - React
 - TypeScript
@@ -69,8 +65,9 @@ O projeto começou com o desenvolvimento da API em Java e Spring Boot e posterio
 - HTML
 - CSS
 - ESLint
+- React Router
 
-## Ferramentas
+### Ferramentas
 
 - Git
 - GitHub
@@ -79,68 +76,84 @@ O projeto começou com o desenvolvimento da API em Java e Spring Boot e posterio
 
 ---
 
-#  Arquitetura
-
-O backend utiliza uma arquitetura em camadas:
-
-Controller
-→
-Service
-→
-Repository
-→
-PostgreSQL
-
-A estrutura do backend é separada principalmente entre:
-
-- Controllers
-- Services
-- Repositories
-- Entities
-- DTOs
-- Requests
-- Responses
-
-No frontend, estou utilizando React com componentes funcionais, props, gerenciamento de estado e integração com a API REST.
-
----
-
-# ✅ Funcionalidades
-
-## 👤 Membros
+##  Arquitetura
 
 ### Backend
 
-- [x] Cadastro de membros
-- [x] Listagem de membros
-- [x] Busca de membro por ID
-- [x] Atualização de membros
-- [x] Exclusão de membros
+O backend utiliza uma arquitetura em camadas:
 
-### Frontend
+```text
+Controller
+    ↓
+Service
+    ↓
+Repository
+    ↓
+PostgreSQL
 
-- [x] Listagem de membros
-- [x] Cadastro de membros
-- [x] Exclusão de membros
-- [x] Atualização de membros
-- [ ] Preenchimento automático do formulário ao editar
+A aplicação está organizada principalmente em:
 
----
+Controllers
+Services
+Repositories
+Entities
+DTOs
+Requests
+Responses
+Frontend
 
-##  Treinos e exercícios
+O frontend utiliza React com componentes funcionais, gerenciamento de estado, props, hooks e React Router para navegação entre as páginas.
 
-- [ ] Cadastro de exercícios
-- [ ] Categorias de exercícios
-- [ ] Criação de treinos
-- [ ] Associação de exercícios aos treinos
-- [ ] Associação de treinos aos membros
+A comunicação entre frontend e backend é realizada através de uma API REST.
 
----
+React + TypeScript
+        ↓
+      HTTP
+        ↓
+  Spring Boot
+        ↓
+ Spring Data JPA
+        ↓
+   PostgreSQL
+   ```
 
-# 📚 O que estou praticando
-
-## Java e Spring Boot
-
+### ✅ Funcionalidades
+### 👤 Membros
+- Cadastro de membros
+- Listagem de membros
+- Busca de membro por ID
+- Atualização de membros
+- Exclusão de membros
+- Indicação visual de status do membro
+### 🏋️ Exercícios
+- Cadastro de exercícios
+- Listagem de exercícios
+- Atualização de exercícios
+- Exclusão de exercícios
+- Identificação do grupo muscular
+### 📋 Treinos
+- Cadastro de treinos
+- Listagem de treinos
+- Atualização de treinos
+- Exclusão de treinos
+- Associação de treino a um membro
+### 🔗 Exercícios nos treinos
+- Associação de exercícios a treinos
+- Definição de séries
+- Definição de repetições
+- Listagem dos exercícios de um treino
+- Atualização das informações
+- Exclusão de exercícios do treino
+### 🖥️ Interface
+- Dashboard
+- Navegação entre páginas
+- Sidebar
+- Header
+- Componentes reutilizáveis
+- Melhorias de UI/UX
+- Layout responsivo
+### 📚 Conhecimentos praticados
+- Java e Spring Boot
 - Programação Orientada a Objetos
 - Arquitetura em camadas
 - Controller, Service e Repository
@@ -156,33 +169,28 @@ No frontend, estou utilizando React com componentes funcionais, props, gerenciam
 - Optional
 - orElseThrow()
 - Conversão de Entity para DTO
-- Relacionamento entre recursos
+- Relacionamentos entre entidades
 - PostgreSQL
-- Spring Security
-
-## TypeScript
-
+- TypeScript
 - Tipagem estática
 - Interfaces e Types
 - Promise
 - async/await
 - fetch
 - JSON
-- Manipulação do DOM
 - Eventos
-- addEventListener
 - Template literals
-- forEach
+- map
+- find
 - filter
 - import e export
 - Formulários
 - Tipagem de eventos
-
-## React
-
+- React
 - Componentes funcionais
 - JSX / TSX
 - Props
+- children
 - Callback functions
 - useState
 - useEffect
@@ -192,169 +200,101 @@ No frontend, estou utilizando React com componentes funcionais, props, gerenciam
 - Comunicação entre componentes
 - Gerenciamento de estado
 - Integração com API REST
-
----
-
-#  Próximos passos
-
-## Backend
-
-- [ ] CRUD de exercícios
-- [ ] Categorias de exercícios
-- [ ] CRUD de treinos
-- [ ] Relacionamento entre exercícios e treinos
-- [ ] Relacionamento entre treinos e membros
-- [ ] Bean Validation
-- [ ] Tratamento global de exceções
-- [ ] Enums
-- [ ] Melhorias na configuração de segurança
-- [ ] Autenticação
-- [ ] Autorização
-- [ ] Testes unitários
-- [ ] Testes de integração
-- [ ] Documentação da API
-
-## Frontend
-
-- [ ] Preenchimento automático do formulário de edição
-- [ ] CRUD de exercícios
-- [ ] CRUD de treinos
-- [ ] Dashboard
-- [ ] Busca e filtros
-- [ ] Tratamento de erros
-- [ ] Feedback visual das operações
-- [ ] Melhorias de UX/UI
-- [ ] Responsividade
-- [ ] Autenticação
-- [ ] Controle de acesso
-
-## Deploy
-
-- [ ] Deploy do backend
-- [ ] Deploy do frontend
-- [ ] Banco de dados em produção
-- [ ] Configuração das variáveis de ambiente
-- [ ] Publicação da aplicação
-- [ ] Documentação da aplicação publicada
-
----
-
-# ▶️ Como executar o projeto
-
-## Pré-requisitos
-
-- Java 25
-- Maven
-- PostgreSQL
-- Node.js
-- npm
-- Git
-
----
-
-## 1. Banco de dados
+- React Router
+- useNavigate
+- useParams
+▶️ Como executar o projeto
+Pré-requisitos
+Java 25
+Maven
+PostgreSQL
+Node.js
+npm
+Git
+### 1. Banco de dados
 
 Crie um banco PostgreSQL chamado:
 
-```text
 gymmanager
-````
 
 O projeto utiliza variáveis de ambiente para as credenciais do banco.
 
 Configure:
 
-```text
 DB_USERNAME=seu_usuario
 DB_PASSWORD=sua_senha
-```
 
-O `application.properties` utiliza essas variáveis:
+O application.properties utiliza essas variáveis:
 
-```properties
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
-```
 
-> Não coloque suas credenciais diretamente no repositório.
+Importante: não coloque suas credenciais diretamente no repositório.
 
----
-
-## 2. Executando o Backend
+### 2. Executando o Backend
 
 Na raiz do projeto.
 
-### Windows
-
-```bash
+Windows
 mvnw.cmd spring-boot:run
-```
-
-### Linux / macOS
-
-```bash
+Linux / macOS
 ./mvnw spring-boot:run
-```
 
-Por padrão, a API ficará disponível em:
+A API estará disponível em:
 
-```text
 http://localhost:8080
-```
+### 3. Executando o Frontend
 
----
+Entre na pasta:
 
-## 3. Executando o Frontend
-
-Entre na pasta do frontend:
-
-```bash
 cd frontend
-```
 
 Instale as dependências:
 
-```bash
 npm install
-```
 
-Execute o projeto:
+Execute:
 
-```bash
 npm run dev
-```
 
-O Vite disponibilizará o frontend em um endereço semelhante a:
+O frontend estará disponível em:
 
-```text
 http://localhost:5173
-```
+### 🚀 Próximos passos
+### Backend
+- Bean Validation
+- Tratamento global de exceções
+- Enums
+- Melhorias na configuração de segurança
+- Autenticação
+- Autorização
+- Testes unitários
+- Testes de integração
+- Documentação da API
+### Frontend
+- Tratamento de erros
+- Feedback visual das operações
+- Busca e filtros
+- Melhorias de UX/UI
+- Autenticação
+- Controle de acesso
+### Deploy
+- Deploy do backend
+- Deploy do frontend
+- Banco de dados em produção
+- Configuração das variáveis de ambiente
+- Publicação da aplicação
+- Documentação da aplicação publicada
+📌 Status do projeto
 
----
+### Em desenvolvimento
 
-# 🔗 Integração
+O Gym Manager já possui uma base funcional de backend e frontend, incluindo gerenciamento de membros, exercícios, treinos e associação de exercícios aos treinos.
 
-Atualmente o frontend React se comunica com a API REST desenvolvida em Spring Boot.
+O próximo foco do projeto é consolidar a camada de qualidade e segurança, com tratamento de exceções, validações, testes e autenticação, além da preparação para publicação da aplicação.
 
-React + TypeScript
-->
-HTTP
-->
-Spring Boot
-->
-Spring Data JPA
-->
-PostgreSQL
+### 👨‍💻 Sobre o projeto
 
----
+O Gym Manager faz parte da minha jornada de estudos em desenvolvimento de software, com foco inicial em Backend Java e evolução gradual para desenvolvimento Full Stack.
 
-
-
-#  Status
-
-**Em desenvolvimento**
-
-O CRUD de membros já está funcionando no backend e no frontend.
-
-Atualmente o foco está na evolução do frontend, implementação dos módulos de exercícios e treinos e, posteriormente, testes, segurança e publicação da aplicação.
-
+O projeto está sendo construído de forma incremental, utilizando novas funcionalidades como oportunidade para aplicar na prática os conceitos estudados.
