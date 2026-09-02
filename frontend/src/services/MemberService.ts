@@ -20,8 +20,7 @@ export const addMember = async (createMember: CreateMember): Promise<Member[]> =
   },
   body: JSON.stringify(createMember)
 });
-    const response = await fetch(`http://localhost:8080/members`);
-    return response.json();
+    return getMembers();
 };
 
 export const getMemberById = async (id: number): Promise<Member> => {

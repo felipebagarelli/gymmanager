@@ -7,15 +7,13 @@ import com.felipebagarelli.gymmanager.entity.Member;
 import com.felipebagarelli.gymmanager.repository.MemberRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 
 @Service
 public class MemberService {
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     private MemberResponse toResponse(Member member) {
         return new MemberResponse(
