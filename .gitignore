@@ -9,9 +9,6 @@
 # Visual Studio
 .vs/
 
-# Claude
-.claude/
-
 # Maven
 target/
 
