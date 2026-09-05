@@ -8,10 +8,6 @@ O sistema permite gerenciar alunos, exercícios e treinos, incluindo a associaç
 >
 > O Gym Manager evolui conforme novos conhecimentos são incorporados. As funcionalidades listadas representam o estágio atual da aplicação.
 
-<!-- CONFIRMAR: padronize "alunos" em todo o projeto — README, interface, e também
-     no código (entidade, controller, endpoints). Se a sua entidade se chama
-     "Member", troque "aluno" por "membro" neste arquivo inteiro. O importante
-     é que os três lugares digam a mesma coisa. -->
 
 ---
 
@@ -143,9 +139,7 @@ React + TypeScript
 
 ## Endpoints
 
-<!-- CONFIRMAR: preencha esta tabela com os caminhos reais do seu FipeController
-     e demais controllers. Não deixe valores errados aqui — um recrutador
-     técnico pode testar. Se preferir, apague a seção até implementar o Swagger. -->
+
 
 URL base: `http://localhost:8080`
 
@@ -229,9 +223,7 @@ O frontend estará disponível em `http://localhost:5173`.
 - Autenticação e controle de acesso
 - Deploy do backend, do frontend e do banco de dados
 
-<!-- Os demais itens da lista antiga (enums, filtros, feedback visual de UX etc.)
-     foram movidos para as Issues do repositório. Crie as issues antes de
-     publicar esta versão, para a frase abaixo ficar verdadeira. -->
+
 
 As melhorias menores estão registradas nas [Issues](https://github.com/felipebagarelli/gymmanager/issues) do repositório.
 
